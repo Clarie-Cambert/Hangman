@@ -10,7 +10,7 @@ h1 {
     font-size: 6rem;
     color: #cb6db4;
     text-shadow: 5px 5px 10px black; 
-    margin: 0;
+    margin: 25px 0 0 0;
     animation: myAnim  3s ease 0s 1 normal none;
 }
 
@@ -44,7 +44,7 @@ aside {
     font-size: 2.2rem;
     font-weight: bold;
     color: #fff;
-
+    margin: 30px 0 50px 0;
 }
 
 .keyboard,
@@ -120,8 +120,7 @@ aside {
     box-shadow: #9e2525 0px 5px;
 }
 
-
-.screen{
+.content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,19 +138,20 @@ aside {
 #wrong-letters {
     font-size: 50px;
 }
-
-.word{
+#word {
     display: flex;
-    position: absolute;
-    
+    justify-content: center;
+    margin: 30px 0 50px 0;
 }
-.single-letter {
+#single-letter {
     border-bottom: 4px solid #FFF;
     display: inline-flex;
-    font-size: 30px;
+    font-size: 50px;
     align-items: center;
     justify-content: center;
     margin: 0 3px;
+    height: 50px;
+    width: 20px;
 }
 .popup-content {
     background-color: rgba(0, 6, 12, 0.39);
