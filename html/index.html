@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&amp;display=swap" rel="stylesheet">
+    <title>Hangman : le jeu du pendu</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <!-- <div class="container">
+           
+        </div> -->
+        <h1>Le jeu du pendu</h1>
+        <div class="sub-title">Essayes de deviner le mot caché !</div>
+    </header>
+    <main>
+        <div class="screen">
+            <svg height="250" width="200" class="hangman">
+                <!-- Potence -->
+                <line x1="65" y1="20" x2="140" y2="20"></line>
+                <line x1="140" y1="25" x2="140" y2="50" ></line>
+                <line x1="60" y1="20" x2="60" y2="230"></line>
+                <line x1="20" y1="230" x2="140" y2="230"></line>
+
+                <!-- Bonhomme -->
+                <!-- Tete -->
+                <circle  cx="140" cy="70" r="20" class="body-man"/>
+
+                <!-- Corps -->
+                <line x1="140" y1="90" x2="140" y2="150" class="body-man"></line>
+                <line x1="140" y1="100" x2="120" y2="140" class="body-man"></line>
+                <line x1="140" y1="100" x2="160" y2="140" class="body-man"></line>
+                <line x1="140" y1="150" x2="120" y2="200" class="body-man"></line>
+                <line x1="140" y1="150" x2="160" y2="200" class="body-man"></line>
+            </svg>
+
+            <div class="aside">
+                Mauvaises lettres :
+                <div id="wrong-letters"></div>
+            </div>
+            <div class="word">
+                <span class="single-letter">jiizeifzei </span>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="letters">
+                <button class="key letter">a</button>
+                <button class="key letter">z</button>
+                <button class="key letter">e</button>
+                <button class="key letter">r</button>
+                <button class="key letter">t</button>
+                <button class="key letter">y</button>
+                <button class="key letter">u</button>
+                <button class="key letter">i</button>
+                <button class="key letter">o</button>
+                <button class="key letter">p</button>
+                <button class="key letter">q</button>
+                <button class="key letter">s</button>
+                <button class="key letter">d</button>
+                <button class="key letter">f</button>
+                <button class="key letter">g</button>
+                <button class="key letter">h</button>
+                <button class="key letter">j</button>
+                <button class="key letter">k</button>
+                <button class="key letter">l</button>
+                <button class="key letter">m</button>
+                <button class="key letter">w</button>
+                <button class="key letter">x</button>
+                <button class="key letter">c</button>
+                <button class="key letter">v</button>
+                <button class="key letter">b</button>
+                <button class="key letter">n</button>
+            </div>
+            <div class="others">
+                <button class="maj">⬆</button>
+                <button class="key space"> </button>
+                <button class="return">‹ Back</button>
+            </div>
+        </div>
+        <div class="popup-content">
+            <div class="popup">
+                <button id="btn-message">
+                    Bravo, tu as gagné! <br>
+                    Rejouer
+                </button>
+            </div>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification">
+            <p class="notification">Vous avez déjà essayé cette lettre</p>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
