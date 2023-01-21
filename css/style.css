@@ -147,13 +147,15 @@ aside {
     border-bottom: 4px solid #FFF;
     display: inline-flex;
     font-size: 50px;
+    text-transform : uppercase;
     align-items: center;
     justify-content: center;
-    margin: 0 3px;
+    padding: 30px;
+    margin: 0 5px;
     height: 50px;
     width: 20px;
 }
-.popup-content {
+#popup-content {
     background-color: rgba(0, 6, 12, 0.39);
     color: white;
     position: fixed;
@@ -181,7 +183,7 @@ aside {
 #btn-message:active {
      transform: scale(0.95, 0.95);
 }
-.notification {
+#notification {
     background-color: #cb6db381;
     border-radius: 10px 10px 0 0 ;
     padding: 10px;
@@ -191,7 +193,7 @@ aside {
     right: 35%;
     transition: tranform 0.3 ease-in-out;
 }
-.notification.on {
+#notification.on {
     transform: translateY(-80px);
 }
 
