@@ -35,10 +35,6 @@ function showWord() {
 
     const internalWord = wordEl.innerText.replace(/\n/g, '');
 
-
-    console.log(internalWord);
-    console.log(selectedWord);
-
     if(internalWord == selectedWord) {
         finalMessage.innerText = 'Bravo, tu as gagné!';
         popup.style.display = 'flex';
@@ -83,9 +79,33 @@ function showNotification() {
 
 
 // Event Listener
+
+for (const letterKey of letterKeys) {
+    
+    letterKey.addEventListener('click', e => {
+        
+        const letterTarget = e.currentTarget.textContent;
+        
+        if ( selectedWord.includes( letterTarget )) {
+            if( !goodLettersArray.includes( letterTarget )) {
+                goodLettersArray.push( letterTarget );
+                showWord();
+            } else {
+                showNotification();
+            }
+        } else {
+            if( !wrongLettersArray.includes( letterTarget )) {
+                wrongLettersArray.push( letterTarget );
+                updateWrongLetterElem();
+            } else {
+                showNotification();
+            }
+        }
+    })
+}
 window.addEventListener('keydown', e => {
 
-    if ( e.keyCode >= 65 && e.keyCode <= 90 ) {
+    if ( e.which >= 65 && e.which <= 90 ) {
 
         const letterTarget = e.key;
 
@@ -106,30 +126,6 @@ window.addEventListener('keydown', e => {
         }
     }
 })
-
-for (const letterKey of letterKeys) {
-    
-    letterKey.addEventListener('click', e => {
-
-        const letterTarget = e.currentTarget.textContent;
-
-        if ( selectedWord.includes( letterTarget )) {
-            if( !goodLettersArray.includes( letterTarget )) {
-                goodLettersArray.push( letterTarget );
-                showWord();
-            } else {
-                showNotification();
-            }
-        } else {
-            if( !wrongLettersArray.includes( letterTarget )) {
-                wrongLettersArray.push( letterTarget );
-                updateWrongLetterElem();
-            } else {
-                showNotification();
-            }
-        }
-    })
-}
 
 btnReplay.addEventListener('click', () => {
     goodLettersArray.splice(0);
