@@ -162,7 +162,7 @@ main{
     top: 0px;
     left: 35%;
     right: 35%;
-    display: flex;
+    display: none;
     transition: tranform 0.3 ease-in-out;
     justify-content: center;
 }
