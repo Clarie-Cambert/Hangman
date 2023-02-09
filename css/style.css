@@ -38,8 +38,13 @@ main{
     flex-direction: column;
 }
 .aside {
-position: absolute;
-right: 20rem;
+    position: absolute;
+    right: 20rem;
+    background-color: var(--bg-color);
+    border: 5px solid var(--coral-color);
+    border-radius: 5px;
+    height: 11rem;
+    padding: 20px;
 }
 
 
