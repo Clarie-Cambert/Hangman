@@ -16,34 +16,33 @@
         <h1>Le jeu du pendu</h1>
         <div class="sub-title">Essayes de deviner le mot caché !</div>
     </header>
+    <div class="aside">
+        <p>Mauvaises lettres</p>
+        <div id="wrong-letters"></div>
+    </div>
     <main>
         <div class="content">
             <svg height="250" width="200" class="hangman">
                 <!-- Potence -->
-                <line x1="65" y1="20" x2="140" y2="20"></line>
-                <line x1="140" y1="25" x2="140" y2="50" ></line>
-                <line x1="60" y1="20" x2="60" y2="230"></line>
-                <line x1="20" y1="230" x2="140" y2="230"></line>
+                <line x1="20" y1="230" x2="140" y2="230" class="hangman-part"></line>
+                <line x1="60" y1="20" x2="60" y2="230" class="hangman-part"></line>
+                <line x1="65" y1="20" x2="140" y2="20" class="hangman-part"></line>
+                <line x1="140" y1="25" x2="140" y2="50" class="hangman-part" ></line>
 
                 <!-- Bonhomme -->
                 <!-- Tete -->
-                <circle  cx="140" cy="70" r="20" class="body-man"/>
+                <circle  cx="140" cy="70" r="20" class="hangman-part body-man"/>
 
                 <!-- Corps -->
-                <line x1="140" y1="90" x2="140" y2="150" class="body-man"></line>
-                <line x1="140" y1="100" x2="120" y2="140" class="body-man"></line>
-                <line x1="140" y1="100" x2="160" y2="140" class="body-man"></line>
-                <line x1="140" y1="150" x2="120" y2="200" class="body-man"></line>
-                <line x1="140" y1="150" x2="160" y2="200" class="body-man"></line>
+                <line x1="140" y1="90" x2="140" y2="150" class="hangman-part body-man"></line>
+                <line x1="140" y1="100" x2="120" y2="140" class="hangman-part body-man"></line>
+                <line x1="140" y1="100" x2="160" y2="140" class="hangman-part body-man"></line>
+                <line x1="140" y1="150" x2="120" y2="200" class="hangman-part body-man"></line>
+                <line x1="140" y1="150" x2="160" y2="200" class="hangman-part body-man"></line>
             </svg>
-
-            <div class="aside">
-                Mauvaises lettres :
-                <span id="wrong-letters"></span>
-            </div>
         </div>
-       <div id="word">
-       </div>
+        <div id="word">
+        </div>
         <div class="keyboard">
             <div class="letters">
                 <button class="key letter">a</button>
@@ -73,17 +72,13 @@
                 <button class="key letter">b</button>
                 <button class="key letter">n</button>
             </div>
-            <div class="others">
-                <button class="maj">⬆</button>
-                <button class="key space"> </button>
-                <button class="return">‹ Back</button>
-            </div>
         </div>
+
         <div id="popup-content">
             <div class="popup">
                 <button id="btn-message">
                     <p id="final-message">Bravo, tu as gagné !</p>
-                    <p>Rejouer</p>
+                    <p>Rejouer 🚀</p>
                 </button>
             </div>
         </div>

@@ -1,3 +1,13 @@
+:root {
+    --bg-color: #393939;
+    --shadow-color: #685465;
+    --medium-color: #be667c;
+    --coral-color: #ee9480;
+    --orange-color: #ffb356;
+    --yellow-color: #fff5e2;
+    --white: #fff;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,45 +15,38 @@ p {
     padding: 0;
     margin: 0;
 }
-
+html {
+    background-image: url("../img/backgroungDark.png");
+    overflow: hidden;
+}
 h1 {
     font-size: 6rem;
-    color: #cb6db4;
-    text-shadow: 5px 5px 10px black; 
+    color: var(--orange-color);
+    text-shadow: var(--shadow-color) 3px 5px;
     margin: 25px 0 0 0;
     animation: myAnim  3s ease 0s 1 normal none;
 }
 
 body {
     text-align: center;
-    color: #FFF;
+    color: var(--yellow-color);
     font-family: 'Nunito', sans-serif;
-    background-image: radial-gradient(circle, #29001e, #3c0328, #520231, #690238, #80013e);
-
-    overflow: hidden;
-    /* background-image: linear-gradient(to bottom, #3e0c52, #673470, #8f5c90, #b886b1, #e0b2d5); */
-    /* background-image:url(../img/hangman.png); */
-    /* background-size: 4%;
-    background-repeat: repeat; */
-
 }
 main{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
 }
-aside {
-
+.aside {
+position: absolute;
+right: 20rem;
 }
 
-.button {
-
-} 
 
 .sub-title {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--coral-color);
     margin: 30px 0 50px 0;
 }
 
@@ -58,7 +61,6 @@ aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 .maj,
 .return,
@@ -71,72 +73,41 @@ aside {
     outline: none;
 }
 .letter {
-    background: #cb6db4;
+    background: var(--coral-color);
     font-size: 1.7rem;
     width: 3rem;
-    box-shadow: #7c2169 0px 5px;
+    box-shadow: var(--shadow-color) 2px 5px;
     margin-right: 0.5rem;
     margin-bottom: .9rem;
-    color: #1e0f19;
+    color: var(--bg-color);;
 }
 
-.return {
-    width: auto;
-    font-size: 1rem;
-    padding: 0 .5rem;
-    color: #FFF;
-    background: #ce3535;
-    box-shadow: #9e2525 0px 5px;
-    margin-left: 1rem;
-    justify-self: flex-end;
-
-}
-
-.maj,
-.space {
-    background: #cb6db4;
-    box-shadow: #7c2169 0px 5px;
-    height: 3rem;
-    width:25rem;
-}
-
-.maj {
-    height: 3rem;
-    width:3rem;
-    margin-right: 0.5rem;
-    font-size: 1.7rem;
-    color: #1e0f19;
-}
-.maj:focus,
-.key:focus,
-.return:focus {
+.key:focus {
     animation: pressKey .1s linear;
 }
-
-
-.maj.pressed {
-    color: #FFF;
-    background: #ce3535;
-    box-shadow: #9e2525 0px 5px;
-}
-
 .content{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .hangman {
-    stroke: #fff;
+    stroke: var(--yellow-color);
     stroke-width: 9px;
     stroke-linecap: round;
     fill: transparent;
 }
+.hangman-part {
+    display: none;
+}
 .body-man {
-    /* display: none; */
     animation: Pendu 1s ease 0s 1 normal forwards;
 }
 #wrong-letters {
-    font-size: 50px;
+    padding-top: 25px;
+    position: relative;
+    width: 10em;
+    text-transform : uppercase;
+    font-size: 30px;
 }
 #word {
     display: flex;
@@ -144,7 +115,7 @@ aside {
     margin: 30px 0 50px 0;
 }
 #single-letter {
-    border-bottom: 4px solid #FFF;
+    border-bottom: 4px solid var(--yellow-color);
     display: inline-flex;
     font-size: 50px;
     text-transform : uppercase;
@@ -170,21 +141,21 @@ aside {
 #btn-message {
     font-family: 'Nunito', sans-serif;
     font-size: 50px;
-    color: #FFF;
-    background-color: #225fb5;
+    color: var(--bg-color);;
+    background-color: var(--orange-color);;
     box-shadow: 2px 10px 30px 5px black;
     border-radius: 500px;
     padding: 11rem 1rem 11rem 1rem;
     animation: popup 1s ease 12ms 1 normal none;
 }
 #btn-message:hover {
-    background-color: #376cb6;
+    background-color: var(--coral-color);
 }
 #btn-message:active {
      transform: scale(0.95, 0.95);
 }
 #notification {
-    background-color: #cb6db381;
+    background-color: #a96c7b73;
     border-radius: 10px 10px 0 0 ;
     padding: 10px;
     position: absolute;
