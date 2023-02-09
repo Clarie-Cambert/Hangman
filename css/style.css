@@ -17,6 +17,7 @@ p {
 }
 html {
     background-image: url("../img/backgroungDark.png");
+    overflow-y: scroll;
 }
 h1 {
     font-size: 6rem;
