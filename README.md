@@ -8,4 +8,4 @@ Le principe est simple (et je l'espère connu de tous.. 👀) :
 
   Vous devez deviner le mot attendu, lettre après lettre avant que le bonhomme... ne meurt pendu! ☠️
   
-Pour le decouvrir, cliquez [ici]([link](https://clarie-cambert.github.io/Hangman/))!
+Pour le decouvrir, cliquez [ici]([link](https://clarie-cambert.github.io/Hangman/)) !
