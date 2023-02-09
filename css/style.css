@@ -39,12 +39,14 @@ main{
 }
 .aside {
     position: absolute;
-    right: 20rem;
+    left: 70%;
     background-color: var(--bg-color);
     border: 5px solid var(--coral-color);
     border-radius: 5px;
     height: 11rem;
     padding: 20px;
+    font-size: 20px;
+
 }
 
 
@@ -56,19 +58,15 @@ main{
 }
 
 .keyboard,
-.letters,
-.others {
+.letters {
     margin: 0 auto;
 }
-.others,
 .letters {
     width:37rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.maj,
-.return,
 .key {
     font-family: 'Nunito';
     border-radius: 5px;
@@ -156,15 +154,17 @@ main{
      transform: scale(0.95, 0.95);
 }
 #notification {
-    background-color: #a96c7b73;
-    border-radius: 10px 10px 0 0 ;
+    background-color: #a96c7bad;
+    border-radius: 0 0 10px 10px ;
     padding: 10px;
     position: absolute;
-    bottom: 0px;
+    text-align: center;
+    top: 0px;
     left: 35%;
     right: 35%;
-    display: none;
+    display: flex;
     transition: tranform 0.3 ease-in-out;
+    justify-content: center;
 }
 
 @keyframes marquee {
@@ -235,4 +235,78 @@ main{
 	100% {
 		transform: scale3d(1, 1, 1);
 	}
+}
+
+@media screen and (max-width: 1180px) {
+    .aside {
+        bottom: 0px;
+        height: 5rem;
+        padding: 2px;
+        left: 15%;
+        right: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    #wrong-letters {
+        padding-top: 0px;
+        width: 70%;
+
+    }
+    #notification {
+        left: 20%;
+        right: 20%;
+    }
+    
+}
+
+@media screen and (max-width: 770px) {
+    h1{
+    font-size: 4rem;
+    }
+    .sub-title {
+        font-size: 2rem;
+    }
+
+    #single-letter {
+        border-bottom: 3px solid var(--yellow-color);
+        font-size: 40px;
+        padding: 20px;
+        height: 40px;
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 616px) {
+    h1{
+    font-size: 3rem;
+    }
+    .sub-title {
+        font-size: 1.5rem;
+    }
+    #single-letter {
+        border-bottom: 3px solid var(--yellow-color);
+        font-size: 30px;
+        padding: 10px;
+        height: 30px;
+    }
+    .aside {
+        height: 4rem;
+        padding: 2px;
+        left: 15%;
+        font-size: 17px;
+        right: 15%;
+    }
+    #wrong-letters {
+        font-size: 17px;
+    }
+    .letters {
+        width:25rem;
+    }
+    #notification {
+        left: 10%;
+        right: 10%;
+    }
 }
