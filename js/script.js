@@ -8,7 +8,7 @@ const hangman = document.querySelectorAll('.hangman-part');
 const letterKeys = document.querySelectorAll('.key');
 
 const words = [
-    'TELEPHONE', 'CHAUSSURES', 'CHEVEUX', 'UNIVERSEL', 'CINEMA', 'SPORT', 'CHAT', 'CHIEN', 'MARVEL', 'VOLDEMORT', 'ORDINATEUR', 'FRANCE', 'FENETRE', 'TASSE', 'CONSTITUTION', 'CODE', 'BRETAGNE', 'MARSEILLE', 'TOILETTES', 'CHAMBRE', 'RESTAURANT', 'POMME', 'TABLE', 'COUSSIN', 'EPONGE', 'SUPERMAN', 'PARIS', 'AMPOULE', 'CROISSANT', 'OEUFS', 'BAGUETTE', 'APPLICATION', 'JAVASCRIPT'
+    'telephone', 'chaussures', 'cheveux', 'universel', 'cinema', 'sport', 'chat', 'chien', 'marvel', 'voldemort', 'ordinateur', 'france', 'fenetre', 'tasse', 'constitution', 'code', 'bretagne', 'marseille', 'toilettes', 'chambre', 'restaurant', 'pomme', 'table', 'coussin', 'eponge', 'superman', 'paris', 'ampoule', 'croissant', 'oeufs', 'baguette', 'application', 'javascript'
 ];
 
 let selectedWord = words[ Math.floor(Math.random() * words.length) ];
@@ -34,6 +34,7 @@ function showWord() {
     `;
 
     const internalWord = wordEl.innerText.replace(/\n/g, '');
+
 
     console.log(internalWord);
     console.log(selectedWord);
@@ -74,6 +75,7 @@ function updateWrongLetterElem() {
 // Affichage notification
 function showNotification() {
     notification.classList.add('on')
+
     setTimeout(() => {
         notification.classList.remove('on')
     }, 2000)
