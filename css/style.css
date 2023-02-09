@@ -17,7 +17,6 @@ p {
 }
 html {
     background-image: url("../img/backgroungDark.png");
-    overflow: hidden;
 }
 h1 {
     font-size: 6rem;
@@ -161,13 +160,11 @@ main{
     border-radius: 10px 10px 0 0 ;
     padding: 10px;
     position: absolute;
-    bottom: -80px;
+    bottom: 0px;
     left: 35%;
     right: 35%;
+    display: none;
     transition: tranform 0.3 ease-in-out;
-}
-#notification.on {
-    transform: translateY(-80px);
 }
 
 @keyframes marquee {

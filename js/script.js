@@ -74,11 +74,11 @@ function updateWrongLetterElem() {
 
 // Affichage notification
 function showNotification() {
-    notification.classList.add('on')
+    notification.style.display = 'flex';
 
     setTimeout(() => {
-        notification.classList.remove('on')
-    }, 2000)
+        notification.style.display = 'none';
+    }, 2000);
 }
 
 
